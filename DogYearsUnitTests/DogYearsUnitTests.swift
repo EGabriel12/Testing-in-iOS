@@ -26,14 +26,29 @@ class DogYearsUnitTests: XCTestCase {
     
     func testSubtract(){
         let result = calc.evaluate(op: "-", arg1: 5.0, arg2: 2.0)
-        XCTAssert(result == 3, "Calculator subtract operation failed")
+        XCTAssert(result == 3.0, "Calculator subtract operation failed")
     }
     
     func testAdd(){
         let result = calc.evaluate(op: "+", arg1: 2.0, arg2: 9.0)
         XCTAssert(result == 11.0, "Calculator add operation failed") // Checa se as se as condições do primeiro parâmetro são verdadeiras
     }
+    
+    func testResult(){
+        let res1 = calc.evaluate(op: "+", arg1: 2.0, arg2: 2.0)
+        let res2 = calc.result
+        XCTAssert(res1 == res2, "Calculator displayed result does not match calculation result.")
+    }
 
+    func testClear(){
+        let res1 = calc.evaluate(op: "+", arg1: 2.0, arg2: 2.0)
+        let res2 = calc.result
+        XCTAssert(res1 == res2, "Calculated value did not match result in clear operation test")
+        calc.clear()
+        let res3 = calc.result
+        XCTAssert(res2 != res3 && res3 == 0.0, "Calculator clear operation failed")
+    }
+    
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
