@@ -7,6 +7,8 @@
 //
 
 import XCTest
+@testable import DogYears // Importa o código do projeto
+// O testable nos permite acesso a métodos e elementos como acesso interno
 
 class DogYearsUnitTests: XCTestCase {
 
