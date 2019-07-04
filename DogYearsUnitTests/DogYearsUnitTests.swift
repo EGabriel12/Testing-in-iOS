@@ -35,18 +35,13 @@ class DogYearsUnitTests: XCTestCase {
     }
     
     func testResult(){
-        let res1 = calc.evaluate(op: "+", arg1: 2.0, arg2: 2.0)
-        let res2 = calc.result
-        XCTAssert(res1 == res2, "Calculator displayed result does not match calculation result.")
+
     }
 
     func testClear(){
-        let res1 = calc.evaluate(op: "+", arg1: 2.0, arg2: 2.0)
-        let res2 = calc.result
-        XCTAssert(res1 == res2, "Calculated value did not match result in clear operation test")
         calc.clear()
-        let res3 = calc.result
-        XCTAssert(res2 != res3 && res3 == 0.0, "Calculator clear operation failed")
+        let result = calc.result
+        XCTAssert(result == 0.0, "Calculator clear operation failed")
     }
     
     func testExample() {
