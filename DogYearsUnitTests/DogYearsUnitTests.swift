@@ -24,6 +24,11 @@ class DogYearsUnitTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
+    func testSubtract(){
+        let result = calc.evaluate(op: "-", arg1: 5.0, arg2: 2.0)
+        XCTAssert(result == 3, "Calculator subtract operation failed")
+    }
+    
     func testAdd(){
         let result = calc.evaluate(op: "+", arg1: 2.0, arg2: 9.0)
         XCTAssert(result == 11.0, "Calculator add operation failed") // Checa se as se as condições do primeiro parâmetro são verdadeiras
