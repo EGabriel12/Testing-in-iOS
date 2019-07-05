@@ -26,6 +26,14 @@ class DogYearsUnitTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
+    func testMenuFailing(){
+        var menu = Menu()
+        menu.loadMenu(path: "Dummy.plist")
+        let count = menu.count
+        XCTAssert(count == 0, "Menu loaded menu items for non-existent menu file")
+    }
+    
+    
     func testSubtract(){
         let result = calc.evaluate(op: "-", arg1: 5.0, arg2: 2.0)
         XCTAssert(result == 3.0, "Calculator subtract operation failed")
