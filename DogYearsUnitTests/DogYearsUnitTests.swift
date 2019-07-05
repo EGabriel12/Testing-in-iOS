@@ -52,10 +52,18 @@ class DogYearsUnitTests: XCTestCase {
             return
         }
         _ = vc.view // Cria a referência para os outlets
-        let txt1 = vc.txtInfo.text
+        
+        guard let txt = vc.txtInfo.text else {
+            XCTAssert(false, "Loading content for Info View did not change text")
+            return
+        }
+        
+        //let txt1 = vc.txtInfo.text
         vc.loadContent()
-        let txt2 = vc.txtInfo.text
-        XCTAssert(txt1 != txt2, "Loading content for Info View did not change text")
+        let pred = NSPredicate(format: "text != %@", txt)
+        let exp = expectation(for: pred, evaluatedWith: vc.txtInfo, handler: nil)
+        let result = XCTWaiter.wait(for: [exp], timeout: 5.0) // Espera até que o texto txt seja diferente do atual
+        XCTAssert(result == XCTWaiter.Result.completed, "Loading content for Info View did not change text")
         
     }
     
