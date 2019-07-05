@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		88F2659F22CD944B00AE3A15 /* DogYearsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F2659E22CD944B00AE3A15 /* DogYearsUnitTests.swift */; };
+		88F265A722CF7AB400AE3A15 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F265A622CF7AB400AE3A15 /* URLSessionDataTaskProtocol.swift */; };
+		88F265A922CF7B4400AE3A15 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F265A822CF7B4400AE3A15 /* URLSessionProtocol.swift */; };
 		DD095FC71FA08EA200439546 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD095FC61FA08EA200439546 /* Type.swift */; };
 		DD0FC24C1F973170003495E0 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0FC24B1F973170003495E0 /* Calculator.swift */; };
 		DD0FC24E1F974FB8003495E0 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0FC24D1F974FB8003495E0 /* RoundedButton.swift */; };
@@ -49,6 +51,8 @@
 		88F2659C22CD944B00AE3A15 /* DogYearsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogYearsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F2659E22CD944B00AE3A15 /* DogYearsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogYearsUnitTests.swift; sourceTree = "<group>"; };
 		88F265A022CD944B00AE3A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88F265A622CF7AB400AE3A15 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
+		88F265A822CF7B4400AE3A15 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		DD095FC61FA08EA200439546 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		DD0FC24B1F973170003495E0 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		DD0FC24D1F974FB8003495E0 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 		DDED15A71F96E483000C1150 = {
 			isa = PBXGroup;
 			children = (
+				88F265A622CF7AB400AE3A15 /* URLSessionDataTaskProtocol.swift */,
+				88F265A822CF7B4400AE3A15 /* URLSessionProtocol.swift */,
 				DD7F8B111F96F93A00456B70 /* Source */,
 				DD7F8B121F96F95000456B70 /* Resources */,
 				88F2659D22CD944B00AE3A15 /* DogYearsUnitTests */,
@@ -321,10 +327,12 @@
 				DD5CAC411F970AE200631B7E /* AboutViewController.swift in Sources */,
 				DD5CAC3D1F970AC900631B7E /* InfoViewController.swift in Sources */,
 				DD0FC24E1F974FB8003495E0 /* RoundedButton.swift in Sources */,
+				88F265A722CF7AB400AE3A15 /* URLSessionDataTaskProtocol.swift in Sources */,
 				DDED15B61F96E484000C1150 /* MenuViewController.swift in Sources */,
 				DD5CAC3B1F970ABB00631B7E /* CalculatorViewController.swift in Sources */,
 				DDED15B41F96E484000C1150 /* AppDelegate.swift in Sources */,
 				DD9E69E51FA1E2A100388647 /* Theme.swift in Sources */,
+				88F265A922CF7B4400AE3A15 /* URLSessionProtocol.swift in Sources */,
 				DD9E69E31FA1E21D00388647 /* Themes.swift in Sources */,
 				DD9E69DD1FA1C2AD00388647 /* ThemeCell.swift in Sources */,
 				DD9E69E11FA1E06D00388647 /* UIColor-Extras.swift in Sources */,

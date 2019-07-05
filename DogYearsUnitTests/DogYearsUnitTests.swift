@@ -46,20 +46,22 @@ class DogYearsUnitTests: XCTestCase {
         XCTAssert(result == 0.0, "Calculator clear operation failed")
     }
     
-    func testInfoLoading(){
+    func testInfoLoading() {
+        
         let url = "https://raw.githubusercontent.com/FahimF/Test/master/DogYears-Info.rtf"
-        HTTPClient.shared.get(url: url) { (data, error) in
+        HTTPClient.shared.get(url: url) {
+            (data, error) in
             self.resData = data
         }
         let pred = NSPredicate(format: "resData != nil")
         let exp = expectation(for: pred, evaluatedWith: self, handler: nil)
         let res = XCTWaiter.wait(for: [exp], timeout: 5.0)
-        
         if res == XCTWaiter.Result.completed {
-            XCTAssertNotNil(resData, "No data received from the server for the InfoView content")
+            XCTAssertNotNil(resData, "No data recived from the server for InfoView content")
         } else {
-            XCTAssert(false, "The call to get the url run into some other error")
+            XCTAssert(false, "The call to get the URL ran into some other error")
         }
+        
     }
     
     func testExample() {
