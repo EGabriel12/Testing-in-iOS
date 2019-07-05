@@ -12,6 +12,8 @@ import XCTest
 
 class DogYearsUnitTests: XCTestCase {
     
+    var resData: Data? = nil
+    
     // Somente métodos começando com a palavra Test vão ser executados sem uma ordem específica
     
     let calc = Calculator()
@@ -45,26 +47,19 @@ class DogYearsUnitTests: XCTestCase {
     }
     
     func testInfoLoading(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        XCTAssertNotNil(sb, "Could not instantiate storyboard for Info View content loading")
-        guard let vc = sb.instantiateViewController(withIdentifier: "InformationView") as? InfoViewController else {
-            XCTAssert(false, "Could not instantiate view controller for info view content loading")
-            return
+        let url = "https://raw.githubusercontent.com/FahimF/Test/master/DogYears-Info.rtf"
+        HTTPClient.shared.get(url: url) { (data, error) in
+            self.resData = data
         }
-        _ = vc.view // Cria a referência para os outlets
+        let pred = NSPredicate(format: "resData != nil")
+        let exp = expectation(for: pred, evaluatedWith: self, handler: nil)
+        let res = XCTWaiter.wait(for: [exp], timeout: 5.0)
         
-        guard let txt = vc.txtInfo.text else {
-            XCTAssert(false, "Loading content for Info View did not change text")
-            return
+        if res == XCTWaiter.Result.completed {
+            XCTAssertNotNil(resData, "No data received from the server for the InfoView content")
+        } else {
+            XCTAssert(false, "The call to get the url run into some other error")
         }
-        
-        //let txt1 = vc.txtInfo.text
-        vc.loadContent()
-        let pred = NSPredicate(format: "text != %@", txt)
-        let exp = expectation(for: pred, evaluatedWith: vc.txtInfo, handler: nil)
-        let result = XCTWaiter.wait(for: [exp], timeout: 5.0) // Espera até que o texto txt seja diferente do atual
-        XCTAssert(result == XCTWaiter.Result.completed, "Loading content for Info View did not change text")
-        
     }
     
     func testExample() {
