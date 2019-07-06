@@ -26,14 +26,6 @@ class DogYearsUnitTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testSettingsScreen(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        XCTAssertNotNil(sb, "Could not instantiate storyboard for settings View creation")
-        let vc = sb.instantiateViewController(withIdentifier: "SettingsView") as? SettingsViewController
-        XCTAssertNotNil(vc, "Could not instantiate Settings view controller")
-        _ = vc?.view
-    }
-    
     func testMenuLoadPerformance(){
         var menu = Menu() // Instanciamentos não importam dentro da closure
         self.measure {

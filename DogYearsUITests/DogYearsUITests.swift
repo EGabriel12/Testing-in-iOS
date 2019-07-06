@@ -29,6 +29,32 @@ class DogYearsUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    
+    func testCalculatorEntry(){
+        let display = app.staticTexts.matching(identifier: "result").firstMatch
+        app.buttons["2"].tap()
+        app.buttons["4"].tap()
+        XCTAssert(display.label == "24", "The calculator display value did not change")
+        
+    }
+    
+    func testSettingsNavigation(){
+        let app = XCUIApplication()
+        app.navigationBars["Master"].buttons["Menu"].tap()
+        app.tables.staticTexts["Settings"].tap()
+        let nav = app.navigationBars["Settings"]
+        XCTAssert(nav.exists, "The Settings view navigation bar does not exist")
+    }
+    
+    func testAboutNavigation(){
+        let app = XCUIApplication()
+        app.navigationBars["Master"].buttons["Menu"].tap()
+        app.tables.staticTexts["About"].tap()
+        let nav = app.navigationBars["About"]
+        XCTAssert(nav.exists, "The About view navigation bar does not exist")
+    }
+    
+    
     func testExample() {
         //XCUIApplication().navigationBars["Master"].buttons["Menu"].tap()
         let navBar = app.navigationBars["Master"] // Navigations bars na controller Menu
@@ -40,6 +66,16 @@ class DogYearsUITests: XCTestCase {
         
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testInfoScreen(){
+        
+        let app = XCUIApplication()
+        app.navigationBars["Master"].buttons["Menu"].tap()
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Information"]/*[[".cells.staticTexts[\"Information\"]",".staticTexts[\"Information\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        let nav = app.navigationBars["Information"]
+        XCTAssert(nav.exists, "The information view navigation bar does not exist")
+        
     }
 
 }
