@@ -6,21 +6,34 @@
 	<dict>
 		<key>Copy of UnitTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>DogYears.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>DogYearsPerformanceTests.xcscheme</key>
-		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>DogYears.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>DogYearsPerformanceTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>DogYearsUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>UnitTests.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
@@ -28,6 +41,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>88F2659B22CD944B00AE3A15</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88F265B122D01D9900AE3A15</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88F265BF22D02B4800AE3A15</key>
 		<dict>
 			<key>primary</key>
 			<true/>
