@@ -170,10 +170,6 @@
 		DD5CAC421F970DF800631B7E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				88F265AC22D010FB00AE3A15 /* MockDataTask.swift */,
-				88F265AA22D0104F00AE3A15 /* MockSession.swift */,
-				88F265A622CF7AB400AE3A15 /* URLSessionDataTaskProtocol.swift */,
-				88F265A822CF7B4400AE3A15 /* URLSessionProtocol.swift */,
 				DD9E69E01FA1E06D00388647 /* UIColor-Extras.swift */,
 				DD0FC2511F977F3B003495E0 /* Double-Extras.swift */,
 				DD5CAC431F970E0F00631B7E /* Utility.swift */,
@@ -189,6 +185,10 @@
 				DD7F8B131F96F98C00456B70 /* Views */,
 				DD5CAC421F970DF800631B7E /* Utility */,
 				DDED15B31F96E484000C1150 /* AppDelegate.swift */,
+				88F265AC22D010FB00AE3A15 /* MockDataTask.swift */,
+				88F265AA22D0104F00AE3A15 /* MockSession.swift */,
+				88F265A622CF7AB400AE3A15 /* URLSessionDataTaskProtocol.swift */,
+				88F265A822CF7B4400AE3A15 /* URLSessionProtocol.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";

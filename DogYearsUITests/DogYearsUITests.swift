@@ -28,7 +28,6 @@ class DogYearsUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
     
     func testCalculatorEntry(){
         let display = app.staticTexts.matching(identifier: "result").firstMatch
@@ -69,13 +68,11 @@ class DogYearsUITests: XCTestCase {
     }
     
     func testInfoScreen(){
-        
         let app = XCUIApplication()
         app.navigationBars["Master"].buttons["Menu"].tap()
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["Information"]/*[[".cells.staticTexts[\"Information\"]",".staticTexts[\"Information\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         let nav = app.navigationBars["Information"]
         XCTAssert(nav.exists, "The information view navigation bar does not exist")
-        
     }
 
 }
